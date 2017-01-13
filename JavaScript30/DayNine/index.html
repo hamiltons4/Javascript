@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Console Stuff</title>
+</head>
+<body>
+		<p onclick="makeGreen()">Do it!</p>
+
+		<script>
+			const dogs = [{ name: 'Snickers', age: 2}, { name: 'Hugo', age: 8 }];
+			const mydog = "comet";
+
+			function makeGreen() {
+				const p = document.querySelector('p');
+				p.style.color = '#BADA55';
+				p.style.fontSize = '50px';
+			}
+
+	// Regular
+	console.log("hello");
+
+
+    // Interpolated
+    console.log("Hello I am a %s string", 'super');
+    console.log(`Hello I am a ${mydog} string`);
+    // Styled
+    console.log('%c I am some great text', "font-size:25px; background:grey; text-shadow: 10px; ");
+    // warning!
+    console.warn("Ooops!");
+    // Error :|
+    console.error("Oh Nooo!");
+    // Info
+    console.info("Cornelia is awesome!");
+    // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), "That's not in there!");
+    // clearing
+    // console.clear(); // this will clear the console
+    // Viewing DOM Elements
+    console.log(p);
+    //console.dir(p);
+    // Grouping together
+    dogs.forEach(dog => {
+    	console.log(`This is ${dog.name}`);
+    	console.log(`${dog.name} is ${dog.age} years old`);
+    })
+    // counting
+    // timing
+		</script>
+</body>
+</html>
